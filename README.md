@@ -39,3 +39,23 @@ Este pipeline organiza o fluxo de dados da API do IBGE em quatro camadas: Inbox,
 - **Notebook e DAG:** `silver_to_gold.py`
 - **Salva no bucket:** `gold-autoglass`
 
+
+## Perguntas e Reflexões
+1. Quais perguntas você faria para o time de analistas de negócio ou para os 
+stakeholders sobre os requisitos?
+- Quais demandas esses arquivos atenderão?
+- Quem é o responsável pelo planejamento ?
+- Aonde posso buscar mais detalhes do projeto?
+- Algum dado precisa de controle de acesso?
+
+2. Que outras melhorias ou extensões poderiam ser feitas nesse pipeline?
+- Usaria o Azure Databricks para otimizar todo o ETL, dese a extração até a disponibilização para o Snowflake.
+- Faria um monitoramento com Prometheus + Grafana para monitorar os dados.
+- Colocaria Notificações e alertas para falhas, validações etc
+
+3. Quais diferentes técnicas ou ferramentas você considera que poderiam ser 
+utilizadas para resolver o mesmo problema?
+- No lugar do S3 usaria o Azure Data Lake, no caso de uso do Databricks ou o MinIO em caso de redução de custo
+- Trocaria o uso do Snowflake pelo BigQuery, Athena ou outros. 
+     
+
